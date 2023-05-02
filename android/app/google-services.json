@@ -1,0 +1,39 @@
+{
+  "project_info": {
+    "project_number": "953169170049",
+    "project_id": "jibley",
+    "storage_bucket": "jibley.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:953169170049:android:18e142a2ec14b1dc92c780",
+        "android_client_info": {
+          "package_name": "com.example.jibley"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "953169170049-6t13ker93m4laupnqqt7g90pnmir361k.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyA6tCAZ6RF-2hKSeJQG_KlIU82i63dpYqQ"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "953169170049-6t13ker93m4laupnqqt7g90pnmir361k.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
