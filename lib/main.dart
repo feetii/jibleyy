@@ -8,7 +8,7 @@ import 'package:jibley/pages/welcome_page.dart';
 
 
 import 'Services/authController.dart';
-import 'firebase_options.dart';
+import 'Services/firebase_options.dart';
 
 Future<void> main() async {
   WidgetsFlutterBinding.ensureInitialized();

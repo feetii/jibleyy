@@ -2,11 +2,11 @@ import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 import 'package:get/get_core/src/get_main.dart';
-import 'package:jibley/pages/ProductDetails.dart';
+import 'package:jibley/Product/ProductDetails.dart';
 import 'package:jibley/pages/SignIn.dart';
 import 'package:jibley/pages/tsss2.dart';
 
-import 'Models/Product.dart';
+import '../Models/Product.dart';
 
 class ProductItem extends StatelessWidget {
   final Product product;

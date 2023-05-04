@@ -4,7 +4,7 @@ import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:jibley/Models/Order.dart';
 
-import '../OrderItem.dart';
+import '../../Product/OrderItem.dart';
 
 class cartPage extends StatefulWidget {
 

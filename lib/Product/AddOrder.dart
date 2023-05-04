@@ -6,8 +6,8 @@ import 'package:jibley/pages/NavPages/navho.dart';
 import 'package:page_transition/page_transition.dart';
 import 'package:uuid/uuid.dart';
 
-import 'Models/Product.dart';
-import 'Models/Order.dart';
+import '../Models/Product.dart';
+import '../Models/Order.dart';
 
 class AddOrder extends StatefulWidget {
   final Product product;

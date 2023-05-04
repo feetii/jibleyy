@@ -6,7 +6,7 @@ import 'package:jibley/pages/NavPages/cartPage.dart';
 import 'package:jibley/pages/NavPages/tasksPage.dart';
 
 import '../../Services/authController.dart';
-import '../AddProduct.dart';
+import '../../Product/AddProduct.dart';
 import 'HomePage.dart';
 
 class navho extends StatefulWidget {

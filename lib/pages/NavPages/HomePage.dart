@@ -17,7 +17,7 @@ import 'package:flutter_svg/svg.dart';
 import '../../Models/Product.dart';
 import '../../Services/authController.dart';
 import '../../constants.dart';
-import '../../productItem.dart';
+import '../../Product/productItem.dart';
 
 
 class homePage extends StatefulWidget {

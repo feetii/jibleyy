@@ -77,12 +77,12 @@ class AuthController extends GetxController{
     }catch(e){
       Get.snackbar("about User", "user messege",
       snackPosition: SnackPosition.BOTTOM,
-        titleText: Text('Account creation failed',
+        titleText: const Text('Account creation failed',
           style: TextStyle(
             color: Colors.redAccent,
           ),
           ),
-        messageText: Text(e.toString(),style: TextStyle(
+        messageText: Text(e.toString(),style: const TextStyle(
           color: Colors.black
         ),
         )
@@ -99,12 +99,12 @@ class AuthController extends GetxController{
     }catch(e){
       Get.snackbar("about Login", "Login messege",
           snackPosition: SnackPosition.BOTTOM,
-          titleText: Text('Account Login failed',
+          titleText: const Text('Account Login failed',
             style: TextStyle(
               color: Colors.redAccent,
             ),
           ),
-          messageText: Text(e.toString(),style: TextStyle(
+          messageText: Text(e.toString(),style: const TextStyle(
               color: Colors.black
           ),
           )
