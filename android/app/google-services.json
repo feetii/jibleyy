@@ -33,6 +33,11 @@
           ]
         }
       }
+    },
+    {
+      "hosting": {
+        "source": "C:\\Users\\fethi\\AndroidStudioProjects\\jibley"
+      }
     }
   ],
   "configuration_version": "1"

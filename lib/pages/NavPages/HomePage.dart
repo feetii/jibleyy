@@ -560,6 +560,7 @@ class _homePageState extends State<homePage> with TickerProviderStateMixin{
                       }
                     })
                         .toList();
+                    products.shuffle();
                     return Container(
                       padding: EdgeInsets.only(bottom: 16.0 ,left: 5,right: 5), // adjust bottom padding as needed
                       child: AnimatedBuilder(
@@ -588,7 +589,7 @@ class _homePageState extends State<homePage> with TickerProviderStateMixin{
                                     selectedProductIndex = index;
                                   });
                                 },
-                                child: ProductItem(product: products[index],selected: selectedProductIndex == index,));
+                                child: ProductItem(products: products,selected: selectedProductIndex == index,index: index,));
                           },
                         ),
                       ),
@@ -888,7 +889,17 @@ class _homePageState extends State<homePage> with TickerProviderStateMixin{
               ],
             ));
         }
-      )
+      ),
+
+        floatingActionButton: FloatingActionButton(
+
+        onPressed: () {
+      // Add your onPressed logic here
+
+    },
+    child: Icon(Icons.shopping_cart,color: Colors.black,),
+    backgroundColor: Colors.amber,
+    ),
     );
   }
 }

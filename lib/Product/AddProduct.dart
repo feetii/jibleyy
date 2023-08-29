@@ -1,12 +1,14 @@
 import 'dart:io';
 
 import 'package:firebase_storage/firebase_storage.dart';
+import 'package:flutter/gestures.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 import 'package:image_cropper/image_cropper.dart';
 import 'package:image_picker/image_picker.dart';
 import 'package:cloud_firestore/cloud_firestore.dart';
 import 'package:jibley/Models/Product.dart';
+import 'package:jibley/Product/supabase.dart';
 import 'package:jibley/pages/NavPages/HomePage.dart';
 import 'package:jibley/pages/NavPages/navho.dart';
 import 'package:page_transition/page_transition.dart';
@@ -201,6 +203,16 @@ class _AddProductFormState extends State<AddProductForm> {
                   ElevatedButton(
                     onPressed: _submit,
                     child: Text('Save'),
+                  ),
+                  ElevatedButton(
+                    onPressed: () {
+                      // Navigate to the DestinationPage when the button is pressed.
+                      Navigator.push(
+                        context,
+                        MaterialPageRoute(builder: (context) => supabase()),
+                      );
+                    },
+                    child: Text('go'),
                   ),
                 ],
               ),

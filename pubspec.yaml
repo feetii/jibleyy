@@ -57,13 +57,14 @@ dependencies:
   firebase_storage: ^11.1.0
   google_sign_in: ^5.0.4
   googleapis_auth: ^1.4.0
-
+  supabase_flutter: ^1.6.2
 
 dev_dependencies:
   flutter_test:
     sdk: flutter
   flutter_svg: ^1.1.4
   eva_icons_flutter: ^3.1.0
+
 
 
   # The "flutter_lints" package below contains a set of recommended lints to

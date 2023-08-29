@@ -9,13 +9,15 @@ import 'package:jibley/pages/tsss2.dart';
 import '../Models/Product.dart';
 
 class ProductItem extends StatelessWidget {
-  final Product product;
-  final bool selected; // add this
+  final List<Product> products;
+  final int index;
+  final bool selected;// add this
 
-  const ProductItem({Key? key, required this.product,this.selected = false}) : super(key: key);
+  const ProductItem({Key? key, required this.products,this.selected = false,required this.index}) : super(key: key);
 
   @override
   Widget build(BuildContext context) {
+
     return AnimatedContainer(   duration: const Duration(milliseconds: 300),
       padding: EdgeInsets.all(5.0),
       decoration: BoxDecoration(
@@ -34,12 +36,12 @@ class ProductItem extends StatelessWidget {
         ],
       ),
       child: GestureDetector(
-        onTap:()=>Get.to(()=>ProductDetails(product: product)) ,
+        onTap:()=>Get.to(()=>ProductDetails(products: products,index: index,)) ,
         child: Container(
           padding: EdgeInsets.all(16.0),
           decoration: BoxDecoration(
             image: DecorationImage(
-              image: NetworkImage(product.image),
+              image: NetworkImage(products[index].image),
               fit: BoxFit.cover,
               colorFilter: ColorFilter.mode(
                 Colors.black.withOpacity(0.6),
@@ -77,7 +79,7 @@ class ProductItem extends StatelessWidget {
                       child: ClipRRect(
                         borderRadius: BorderRadius.circular(8.0),
                         child: Image.network(
-                          product.image,
+                          products[index].image,
                           fit: BoxFit.cover,
                           width: double.infinity,
                           height: 200.0,
@@ -85,7 +87,7 @@ class ProductItem extends StatelessWidget {
                       ),
                     ),
                     Visibility(
-                      visible:int.parse(product.discount) > 0,
+                      visible:int.parse(products[index].discount) > 0,
                       child: Positioned(
                         top: 5.0,
                         right: 5.0,
@@ -97,7 +99,7 @@ class ProductItem extends StatelessWidget {
                             borderRadius: BorderRadius.circular(8.0),
                           ),
                           child: Text(
-                            '${product.discount}% OFF',
+                            '${products[index].discount}% OFF',
                             style: TextStyle(
                               color: Colors.red,
                               fontSize: 12.0,
@@ -112,7 +114,7 @@ class ProductItem extends StatelessWidget {
               ),
               SizedBox(height: 8.0),
               Text(
-                product.title,
+                products[index].title,
                 style: const TextStyle(
                     fontSize: 16.0,
                     fontWeight: FontWeight.bold,
@@ -123,18 +125,18 @@ class ProductItem extends StatelessWidget {
                 TextSpan(
                   children: [
                     TextSpan(
-                      text: '${int.parse(product.discount) > 0 ? (double.parse(product.price) - (double.parse(product.price) * int.parse(product.discount) / 100)).toStringAsFixed(2) + ' DA' : product.price.toString() + ' DA'}',
-                      style: TextStyle(
+                      text: int.parse(products[index].discount) > 0 ? (double.parse(products[index].price) - (double.parse(products[index].price) * int.parse(products[index].discount) / 100)).toStringAsFixed(2) + ' DA' : products[index].price.toString() + ' DA',
+                      style: const TextStyle(
                         fontSize: 14.0,
                         fontWeight: FontWeight.bold,
                         color: Colors.white,
                       ),
                     ),
-                    if (int.parse(product.discount) > 0) ...[
+                    if (int.parse(products[index].discount) > 0) ...[
                       TextSpan(text: '  '),
                       TextSpan(
-                        text: '${product.price} DA',
-                        style: TextStyle(
+                        text: '${products[index].price} DA',
+                        style: const TextStyle(
                           fontSize: 14.0,
                           fontWeight: FontWeight.bold,
                           color: Colors.white70,

@@ -35,17 +35,14 @@ class _navhoState extends State<navho> {
     return MaterialApp(
       debugShowCheckedModeBanner: false,
       home: Scaffold(
-
-
-
         resizeToAvoidBottomInset: false,
         bottomNavigationBar: CurvedNavigationBar(
           backgroundColor: Colors.transparent,
           color: Colors.amber,
           height:55,
-          items: <Widget>[
-            Icon(Icons.home, size: 30),
+          items: const <Widget>[
             Icon(Icons.shopping_cart, size: 30),
+            Icon(Icons.home, size: 30),
             Icon(Icons.add_task_rounded, size: 30),
 
           ],
