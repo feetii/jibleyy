@@ -62,8 +62,8 @@ class _AddProductFormState extends State<AddProductForm> {
     showDialog(
       context: context,
       builder: (context) => AlertDialog(
-        title: Text('Product saved'),
-        content: Text('The product has been saved successfully.'),
+        title: const Text('Product saved'),
+        content: const Text('The product has been saved successfully.'),
         actions: [
           TextButton(
             onPressed: () {
@@ -77,7 +77,7 @@ class _AddProductFormState extends State<AddProductForm> {
               // Navigator.of(context).pop();
               // Navigator.of(context).pop();
             },
-            child: Text('OK'),
+            child: const Text('OK'),
           ),
         ],
       ),
@@ -182,7 +182,7 @@ class _AddProductFormState extends State<AddProductForm> {
                   discount = (value!);
                 },
               ),
-              SizedBox(height: 16),
+              const SizedBox(height: 16),
               _imageFilee != null
                   ? Container(
                   width: double.infinity,
@@ -192,7 +192,7 @@ class _AddProductFormState extends State<AddProductForm> {
                   ),
                   child: Image.file(_imageFilee!))
                   : Text('No image selected'),
-              SizedBox(height: 16),
+              const SizedBox(height: 16),
               Row(
                 mainAxisAlignment: MainAxisAlignment.spaceEvenly,
                 children: [

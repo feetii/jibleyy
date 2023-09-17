@@ -67,7 +67,7 @@ void _handRegister(){
         _focusNode.unfocus();
         _focusNode2.unfocus();
         _focusNode3.unfocus();
-        emailController.selection=TextSelection.collapsed(offset: 0);
+        emailController.selection=const TextSelection.collapsed(offset: 0);
       },
       child: Scaffold(
         resizeToAvoidBottomInset: false,
